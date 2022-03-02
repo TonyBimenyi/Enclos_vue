@@ -1,0 +1,10 @@
+:root {
+    --yellow: #F9A835;
+    --blue: #063167;
+}
+
+* {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;
+}
