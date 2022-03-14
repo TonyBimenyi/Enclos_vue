@@ -8,21 +8,25 @@
     
     <div class="navbar">
       <i class='bx bx-menu'></i>
-      <div class="logo"><a href="#">Ecole des Enclos</a></div>
+      <div class="logo"><a href="/dashboard"><img src="/image/logo2.png" alt=""></a></div>
       <div class="nav-links">
         <div class="sidebar-logo">
           <span class="logo-name">CodingLab</span>
           <i class='bx bx-x' ></i>
         </div>
         <ul class="links">
-          <li><a href="#">HOME</a></li>
+        
           <li>
-            <a href="#">HTML & CSS</a>
+            <span class="material-icons-outlined">
+                  person
+                  </span> <router-link to="/students">ELEVES
+            </router-link>
             <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
             <ul class="htmlCss-sub-menu sub-menu">
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Login Forms</a></li>
-              <li><a href="#">Card Design</a></li>
+              <li><router-link to="/students">Listes des eleves</router-link></li>
+              <li><a href="#">
+                Minervales</a></li>
+<!--             
               <li class="more">
                 <span><a href="#">More</a>
                 <i class='bx bxs-chevron-right arrow more-arrow'></i>
@@ -32,30 +36,70 @@
                   <li><a href="#">Pre-loader</a></li>
                   <li><a href="#">Glassmorphism</a></li>
                 </ul>
-              </li>
+              </li> -->
             </ul>
           </li>
           <li>
-            <a href="#">JAVASCRIPT</a>
+            <span class="material-icons-outlined">psychology</span>
+            <router-link to="">ENSEIGNANTS</router-link>
             <i class='bx bxs-chevron-down js-arrow arrow '></i>
             <ul class="js-sub-menu sub-menu">
-              <li><a href="#">Dynamic Clock</a></li>
-              <li><a href="#">Form Validation</a></li>
-              <li><a href="#">Card Slider</a></li>
-              <li><a href="#">Complete Website</a></li>
+              <li><router-link to="">Listes des enseignants</router-link></li>
+              <li><router-link to="">Salaires Enseignants</router-link></li>
             </ul>
           </li>
-          <li><a href="#">ABOUT US</a></li>
-          <li><a href="#">CONTACT US</a></li>
+          <li>
+            <span class="material-icons-outlined">account_box</span>
+            <router-link to="">ADMINISTRATIFS</router-link>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><router-link to="">Listes des Administratifs</router-link></li>
+              <li><router-link to="">Salaires Administratif</router-link></li>
+            </ul>
+          </li>
+           <li>
+              <span class="material-icons-outlined">group_add</span>
+            <router-link to="">VACATAIRES</router-link>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><router-link to="">Listes des Vacataires</router-link></li>
+              <li><router-link to="">Salaires Vacataires</router-link></li>
+            </ul>
+          </li>  
+           <li>
+              <span class="material-icons-outlined">outbox</span>
+            <router-link to="">DEPENSES</router-link>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><router-link to="">Types des Depenses</router-link></li>
+              <li><router-link to="">Listes des Depenses</router-link></li>
+            </ul>
+          </li>
+             <li>
+            <span class="material-icons-outlined">move_to_inbox</span>
+            <router-link to="">REVENUS</router-link>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+               <li><router-link to="">Types des revenus</router-link></li>
+              <li><router-link to="">Listes des Revenus</router-link></li>
+            </ul>
+          </li>
+             <li>
+                <span class="material-icons-outlined">account_balance</span>
+            <router-link to="">BANQUE</router-link>
+            <i class='bx bxs-chevron-down js-arrow arrow '></i>
+            <ul class="js-sub-menu sub-menu">
+              <li><router-link to="">Liste des Retraits</router-link></li>
+              <li><router-link to="">Liste des Versements</router-link></li>
+            </ul>
+          </li>
         </ul>
       </div>
       <div class="logout">
-        <router-link to="/"><p>Deconnexion</p></router-link>
+       <button @click="logout">Deconnexion</button>
       </div>
       <div class="username">
-         <p> <span class="material-icons-outlined">
-account_circle 
-</span>{{$store.state.user.username}}</p>
+         <p> {{$store.state.user.username}}</p>
         
       </div>
       <div class="search-box">
@@ -67,7 +111,6 @@ account_circle
     </div>
    
   </nav>
-  
   </div>
    </template>
    <template v-else>
@@ -94,7 +137,8 @@ export default {
             localStorage.removeItem('user')
           }
         }
-      },
+      }
+    },
       methods:{
         logout(){
             this.$store.state.user = null,
@@ -102,7 +146,6 @@ export default {
             this.$router.push('/')
       },
       }
-    },
 }
 
 </script>
@@ -110,5 +153,5 @@ export default {
     @import url(./assets/css/base.css);
     @import url(./assets/css/form.css);
     @import url(./assets/css/header.css);
-  
+    @import url(./assets/css/table.css);
 </style>

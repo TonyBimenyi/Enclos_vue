@@ -29,7 +29,11 @@ nav .navbar {
     justify-content: space-between;
     margin: auto;
     /* background: red; */
-    padding: 0 50px;
+    /* padding: 0 30px; */
+}
+
+nav .navbar img {
+    height: 80px;
 }
 
 .navbar .logo a {
@@ -54,7 +58,44 @@ nav .navbar .links li {
     align-items: center;
     justify-content: space-between;
     list-style: none;
-    padding: 0 14px;
+    /* padding: 0 4px; */
+}
+
+nav .navbar .links li a:hover {
+    color: var(--yellow);
+    transition: .4s;
+}
+
+.material-icons-outlined {
+    margin-top: -0px;
+    padding: 0 04px;
+    color: var(--yellow);
+    font-size: 20px;
+}
+
+.navbar .logout button {
+    background-color: var(--yellow);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 12px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.navbar .logout button:hover {
+    background-color: var(--blue);
+    transition: all.2s;
+    border: 2px solid var(--yellow)
+}
+
+.username p {
+    color: white;
+    color: var(--yellow);
+    font-weight: 500;
+    font-size: 18px;
 }
 
 nav .navbar .links li a {
