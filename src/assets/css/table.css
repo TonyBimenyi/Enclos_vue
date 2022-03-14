@@ -1,3 +1,49 @@
+.header_table {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.add_btn button {
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border-radius: 5px;
+    display: flex;
+    cursor: pointer;
+}
+
+.search input {
+    border: 2px solid var(--blue);
+    height: 35px;
+}
+
+.add_btn button:hover {
+    color: var(--yellow);
+    transition: .3s;
+}
+
+.table thead {
+    background-color: var(--blue);
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: 4px solid var(--yellow);
+}
+
+.table thead tr td {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 15px 55px;
+}
+
 table {
-    margin-top: 50px;
+    border-collapse: collapse;
+    /* width: 80%; */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
